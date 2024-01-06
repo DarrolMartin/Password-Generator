@@ -2,7 +2,9 @@
 
 ## Overview
 
-Create an application that can generate a random password based on selected criteria by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+Create an application that can generate a random password based on selected criteria by modifying starter code. 
+This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code. 
+It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 * Generate a password when the button is clicked
   * Present a series of prompts for password criteria
     * Length of password
@@ -17,4 +19,3 @@ Create an application that can generate a random password based on selected crit
 
 
 
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
