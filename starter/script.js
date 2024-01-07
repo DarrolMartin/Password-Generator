@@ -107,7 +107,14 @@ var includeSpecial = confirm("Include special characters?");
   alert("Please select at least one character type.");
   return null;
 }
-  console.log(alert);
+return {
+  length: length,
+  includeSpecial: includeSpecial,
+  includeNumeric: includeNumeric,
+  includeLowercase: includeLowercase,
+  includeUppercase: includeUppercase
+};
+
 
 
 
