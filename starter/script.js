@@ -101,7 +101,13 @@ var includeSpecial = confirm("Include special characters?");
   var includeNumeric = confirm("Include numeric characters?");
   var includeLowercase = confirm("Include lowercase characters?");
   var includeUppercase = confirm("Include uppercase characters?");
-    
+
+ //   // Validate that  one character  is selected
+ if (!includeSpecial && !includeNumeric && !includeLowercase && !includeUppercase) {
+  alert("Please select at least one character type.");
+  return null;
+}
+  console.log(alert);
 
 
 
