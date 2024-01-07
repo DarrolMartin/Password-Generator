@@ -115,14 +115,50 @@ return {
   includeUppercase: includeUppercase
 };
 
-
-
-
 // Function for getting a random element from an array
-function getRandom(arr) {}
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+ 
+  // User canceled or entered invalid options
+  if (!options) {
+    return ""; 
+  }
+
+  var allCharacters = [];
+  var result = [];
+
+  if (options.includeSpecial) {
+    allCharacters = allCharacters.concat(specialCharacters);
+    result.push(getRandom(specialCharacters));
+  }
+
+  if (options.includeNumeric) {
+    allCharacters = allCharacters.concat(numericCharacters);
+    result.push(getRandom(numericCharacters));
+  }
+
+  if (options.includeLowercase) {
+    allCharacters = allCharacters.concat(lowerCasedCharacters);
+    result.push(getRandom(lowerCasedCharacters));
+  }
+
+  if (options.includeUppercase) {
+    allCharacters = allCharacters.concat(upperCasedCharacters);
+    result.push(getRandom(upperCasedCharacters));
+  }
+
+  for (var i = result.length; i < options.length; i++) {
+    result.push(getRandom(allCharacters));
+  }
+
+  return result.join(''); 
+}
 
 // Function to generate password with user input
-function generatePassword() {}
+function generatePassword() {
+  var options = getPasswordOptions();
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
