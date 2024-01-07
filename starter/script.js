@@ -96,9 +96,11 @@ function getPasswordOptions() {
       alert("Please enter a valid number between 8 and 128.");
       return null;
 }
-
 }
-
+var includeSpecial = confirm("Include special characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
     
 
 
