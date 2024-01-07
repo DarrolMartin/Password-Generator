@@ -96,7 +96,7 @@ function getPasswordOptions() {
       alert("Please enter a valid number between 8 and 128.");
       return null;
 }
-}
+
 var includeSpecial = confirm("Include special characters?");
   var includeNumeric = confirm("Include numeric characters?");
   var includeLowercase = confirm("Include lowercase characters?");
@@ -114,11 +114,15 @@ return {
   includeLowercase: includeLowercase,
   includeUppercase: includeUppercase
 };
-
+}
 // Function for getting a random element from an array
 function getRandom(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length);
   return arr[randomIndex];
+}
+  // Function to generate password with user input
+function generatePassword() {
+  var options = getPasswordOptions();
  
   // User canceled or entered invalid options
   if (!options) {
@@ -153,11 +157,7 @@ function getRandom(arr) {
   }
 
   return result.join(''); 
-}
 
-// Function to generate password with user input
-function generatePassword() {
-  var options = getPasswordOptions();
 }
 
 // Get references to the #generate element
